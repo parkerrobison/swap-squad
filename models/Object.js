@@ -3,6 +3,14 @@ const sequelize = require("../config/connection");
 
 class Object extends Model {}
 
+const conditions = [
+  "Near Mint",
+  "Lightly Used",
+  "Moderately Used",
+  "Heavily Used",
+  "Damaged",
+];
+
 Object.init(
   {
     id: {
@@ -24,6 +32,18 @@ Object.init(
     user_id: {
       type: DataTypes.STRING,
       references: { model: "user", key: "id" },
+    },
+    quantity: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    condition: {
+      type: DataTypes.INTEGER,
+      validate: { isIn: conditions },
+    },
+    comment_id: {
+      type: DataTypes.INTEGER,
+      references: { model: "comment", key: "id" },
     },
   },
   {
