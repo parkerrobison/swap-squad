@@ -1,0 +1,36 @@
+{
+  "name": "swap-squad",
+  "version": "1.0.0",
+  "description": "An online swap meet",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parkerrobison/swap-squad.git"
+  },
+  "keywords": [
+    "swap",
+    "meet",
+    "squad"
+  ],
+  "author": "Jacob Corum, Parker Robinson, Graham Gibbs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/parkerrobison/swap-squad/issues"
+  },
+  "homepage": "https://github.com/parkerrobison/swap-squad#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "connect-session-sequelize": "^7.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "express-session": "^1.17.1",
+    "jest": "^26.2.2",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.4"
+  }
+}
