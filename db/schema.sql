@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS swap-squad_db;
+DROP DATABASE IF EXISTS swap_squad_db;
 
-CREATE DATABASE swap-squad_db;
+CREATE DATABASE swap_squad_db;
