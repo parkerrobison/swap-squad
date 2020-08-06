@@ -1,6 +1,7 @@
 .DS_Store
 .vscode
 package-lock.json
+notes.txt
 
 # Logs
 logs
