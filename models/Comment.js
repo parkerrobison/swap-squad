@@ -12,7 +12,7 @@ Comment.init(
       autoIncrement: true,
     },
     comment_text: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(500),
       allowNull: false,
       validate: {
         len: [1],
@@ -24,6 +24,7 @@ Comment.init(
         model: "user",
         key: "id",
       },
+      onDelete: "cascade",
     },
     post_id: {
       type: DataTypes.INTEGER,

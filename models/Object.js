@@ -30,7 +30,7 @@ Object.init(
       validate: { len: [50] },
     },
     user_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       references: { model: "user", key: "id" },
     },
     quantity: {
@@ -53,3 +53,5 @@ Object.init(
     tableName: "object",
   }
 );
+
+module.exports = Object;
