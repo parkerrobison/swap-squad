@@ -38,7 +38,7 @@ Object.init(
       allowNull: false,
     },
     condition: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       validate: { isIn: conditions },
     },
     comment_id: {
