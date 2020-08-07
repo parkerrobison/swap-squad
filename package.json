@@ -16,7 +16,7 @@
     "meet",
     "squad"
   ],
-  "author": "Jacob Corum, Parker Robinson, Graham Gibbs",
+  "author": "Jacob Corum, Parker Robison, Graham Gibbs, Rafael DeLima",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/parkerrobison/swap-squad/issues"
@@ -32,5 +32,6 @@
     "jest": "^26.2.2",
     "mysql2": "^2.1.0",
     "sequelize": "^6.3.4"
-  }
+  },
+  "devDependencies": {}
 }

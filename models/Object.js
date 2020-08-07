@@ -53,3 +53,5 @@ Object.init(
     tableName: "object",
   }
 );
+
+module.exports = Object;
