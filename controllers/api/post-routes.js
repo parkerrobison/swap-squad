@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
         include: [
             {
                 model: Comment,
-                attributes: ['id', 'title', 'post_text', 'created_at'],
+                attributes: ['id', 'comment_text', 'post_id', 'created_at'],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -38,7 +38,7 @@ router.get('/:id', (req, res) => {
         include: [
             {
                 model: Comment,
-                attributes: ['id', 'title', 'post_text', 'created_at'],
+                attributes: ['id', 'comment_text', 'post_id', 'created_at'],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -67,7 +67,7 @@ router.post('/', (req, res) => {
     Post.create({
         title: req.body.title,
         post_text: req.body.post_text,
-        user_id: req.session.user_id
+        user_id: req.body.user_id
     })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
@@ -78,7 +78,7 @@ router.post('/', (req, res) => {
 
 // PUT /api/posts/1
 router.put('/:id', (req, res) => {
-    Post.update(req.body, 
+    Post.update( 
         {
             title: req.body.title,
             post_text: req.body.post_text
@@ -97,7 +97,7 @@ router.put('/:id', (req, res) => {
         res.json(dbPostData);
     })
     .catch(err => {
-        conosle.log(err);
+        console.log(err);
         res.status(500).json(err);
     });
 });
