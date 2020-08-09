@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Object } = require('../../models')
+const { Object } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
     Object.findAll({})
@@ -29,13 +30,13 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     Object.create({
         name: req.body.name,
         description: req.body.description,
         quantity: req.body.quantity,
         condition: req.body.condition,
-        user_id: req.body.user_id
+        user_id: req.session.user_id
     })
     .then(dbObjectData => res.json(dbObjectData))
     .catch(err => {
@@ -44,7 +45,7 @@ router.post('/', (req, res) => {
     });
 })
 
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Object.update(req.body, {
         where: {
             id: req.params.id
@@ -63,7 +64,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     Object.destroy({
         where: {
             id: req.params.id
