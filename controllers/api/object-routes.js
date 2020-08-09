@@ -36,7 +36,7 @@ router.post('/', withAuth, (req, res) => {
         description: req.body.description,
         quantity: req.body.quantity,
         condition: req.body.condition,
-        user_id: req.body.user_id
+        user_id: req.session.user_id
     })
     .then(dbObjectData => res.json(dbObjectData))
     .catch(err => {
