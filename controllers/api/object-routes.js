@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Object } = require('../../models')
 
-router.get('/', (res, req) => {
+router.get('/', (req, res) => {
     Object.findAll({})
     .then(dbObjectData => res.json(dbObjectData)) 
     .catch(err => {
