@@ -8,16 +8,14 @@ router.post("/send-email-form", (req, res) => {
 
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-      host: "smtp.mail.yahoo.com", 
-      port: 587,
-      secure: false, // true for 465, false for other ports
+      host: "smtp.mail.yahoo.com",
+      port: 465,
+      secure: true, // true for 465, false for other ports
       auth: {
-        user: process.env.EMAIL_USER, 
-        pass: process.env.EMAIL_PW, 
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PW,
       },
-      tls: {
-        rejectUnauthorized: false,
-      },
+      tls: { rejectUnauthorized: false },
     });
 
     // send mail with defined transport object
