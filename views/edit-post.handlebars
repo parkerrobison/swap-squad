@@ -6,7 +6,7 @@
   <form class="comment-form">
     <div>
       <input name="post-title" type="text" value="{{post.title}}" />
-      <span>({{format_url post.post_url}})</span>
+      <span>({{post.post_text}})</span>
     </div>
     <div>
       Created by you on {{format_date post.created_at}}
