@@ -4,29 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jaws</title>
+  <title>SWAP SQUAD</title>
   <link rel="stylesheet" href="/styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="wrapper">
     <header>
       <h1>
-        <a href="/">Jaws Tech News</a>
+        <a href="/">SWAP <span>SQUAD</span></a>
       </h1>
-    </header>
-    <nav>
+      <nav>
       {{#if loggedIn}}
-      <a href="/dashboard">dashboard</a>
-      <button id="logout" class="btn-no-style">logout</button>
+      <a href="/">Feed</a>
+      <a href="/dashboard">My Stuff</a>
+      <button id="logout" class="btn-no-style">Logout</button>
       {{else}}
       <a href="/login">login</a>
       {{/if}}
     </nav>
+    </header>
     <main>
       {{{body}}}
     </main>
-    <footer>Thanks for visiting!</footer>
+    <footer>
+      <h1>Made with 🙃 by <span>TEAM CYBER MONKEY ATTACK!</span></h1>
+    </footer>
   </div>
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
