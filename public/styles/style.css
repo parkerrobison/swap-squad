@@ -9,7 +9,8 @@
   --blink-black: #000000;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   padding: 0;
   margin: 0;
@@ -22,7 +23,7 @@ a {
   text-decoration: none;
   color: var(--blink-teal);
   font-weight: bold;
-  transition: color .1s;
+  transition: color 0.1s;
   margin-left: 16px;
 }
 
@@ -36,7 +37,7 @@ button {
   padding: 1%;
   color: var(--blink-orange);
   font-weight: bold;
-  transition: background-color .1s;
+  transition: background-color 0.1s;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -50,13 +51,19 @@ button:hover {
   padding: 0;
 }
 
-textarea, input, .comment {
-  padding: .5%;
+textarea,
+input,
+.comment {
+  padding: 0.5%;
   border-radius: 5px;
   border: 1px solid #ccc;
+  display: block;
+  margin: 1rem 0;
+  width: 100%;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   outline: none;
   border: 1px solid var(--blink-peach);
 }
@@ -91,13 +98,15 @@ header {
   padding: 0 1%;
 }
 
-header h1, footer h1 {
+header h1,
+footer h1 {
   font-size: 2em;
-  font-family: 'Permanent Marker', cursive;
-  color: var(--blink-teal)
+  font-family: "Permanent Marker", cursive;
+  color: var(--blink-teal);
 }
 
-header h1 span, footer h1 span {
+header h1 span,
+footer h1 span {
   color: var(--blink-orange);
 }
 
@@ -111,6 +120,10 @@ main {
   padding: 2% 4%;
 }
 
+label {
+  color: var(--blink-teal);
+}
+
 .btn-no-style {
   background: none;
   border: none;
@@ -120,7 +133,7 @@ main {
   color: var(--blink-teal);
   font-size: 100%;
   font-weight: bold;
-  transition: color .1s;
+  transition: color 0.1s;
   margin-left: 16px;
 }
 
@@ -143,7 +156,7 @@ main {
   line-height: 150%;
 }
 
-.post{
+.post {
   background-color: var(--blink-peach);
   border-radius: 1em;
 }
@@ -184,8 +197,8 @@ main {
 
 .comment .meta {
   font-size: 90%;
-  margin-bottom: .5%;
-  opacity: .6;
+  margin-bottom: 0.5%;
+  opacity: 0.6;
 }
 
 .new-post-form input {

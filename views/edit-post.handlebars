@@ -5,8 +5,10 @@
   </h2>
   <form class="edit-post-form">
     <div>
+      <label for="post-title">Title</label>
       <input name="post-title" type="text" value="{{post.title}}" />
-      <textarea name="post-text" type="text">({{post.post_text}})</textarea>
+      <label for="post-text">Text</label>
+      <textarea name="post-text" type="text">{{post.post_text}}</textarea>
     </div>
     <div>
       Created by you on {{format_date post.created_at}}
@@ -23,7 +25,7 @@
     Add a comment
   </h2>
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea name="comment-body" placeholder="What would you like to say?"></textarea>
   </div>
 
   <div>
