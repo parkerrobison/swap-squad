@@ -3,7 +3,7 @@
   <h2>
     Edit Post
   </h2>
-  <form class="comment-form">
+  <form class="edit-post-form">
     <div>
       <input name="post-title" type="text" value="{{post.title}}" />
       <span>({{post.post_text}})</span>
@@ -17,6 +17,20 @@
     <button type="button" class="delete-post-btn">Delete post</button>
   </form>
 </article>
+
+<form class="comment-form">
+  <h2>
+    Add a comment
+  </h2>
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">add comment</button>
+  </div>
+</form>
+
 {{> comments post.comments}}
 {{#if loggedIn}}
 <script src="/js/edit-post.js"></script>
