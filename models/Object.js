@@ -21,13 +21,13 @@ Object.init(
       validate: { len: [1] },
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(1000),
       allowNull: false,
-      validate: { len: [50] },
     },
     user_id: {
       type: DataTypes.INTEGER,
       references: { model: "user", key: "id" },
+      onDelete: "cascade",
     },
     quantity: {
       type: DataTypes.INTEGER,
@@ -39,10 +39,7 @@ Object.init(
     },
     post_id: {
       type: DataTypes.INTEGER,
-      references: {
-        model: "post",
-        key: "id",
-      },
+      references: { model: "post", key: "id" },
     },
     // comment_id: {
     //   type: DataTypes.INTEGER,

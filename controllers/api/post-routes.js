@@ -71,16 +71,24 @@ router.get("/:id", (req, res) => {
 });
 // POST /api/posts
 router.post("/", withAuth, (req, res) => {
-  Post.create({
-    title: req.body.title,
-    post_text: req.body.post_text,
-    user_id: req.session.user_id,
-  })
-    .then((dbPostData) => res.json(dbPostData))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
+  async function fetchAndCreatePostAndObject() {
+    const newPost = await Post.create({
+      title: req.body.post_title,
+      post_text: req.body.post_text,
+      user_id: req.session.user_id,
     });
+
+    const newObject = await Object.create({
+      name: req.body.item_name,
+      description: req.body.item_description,
+      quantity: req.body.item_quantity,
+      condition: req.body.item_condition,
+      user_id: req.session.user_id,
+      post_id: newPost.id,
+    });
+  }
+  fetchAndCreatePostAndObject();
+  res.redirect("/my-stuff");
 });
 
 // PUT /api/posts/1
