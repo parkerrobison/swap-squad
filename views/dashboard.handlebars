@@ -8,7 +8,23 @@
     </div>
     <div>
       <label for="post-text">Text</label>
-      <textarea name="post-text" type="text"></textarea>
+      <textarea id="post-text" name="post-text"></textarea>
+    </div>
+    <div>
+      <label for="item-name">Item Name</label>
+      <input type="text" id="item-name" name="item-name" />
+    </div>
+    <div>
+      <label for="item-description">Item Description</label>
+      <textarea id="item-description" name="item-description"></textarea>
+    </div>
+    <div>
+      <label for="item-quantity">Item Quantity</label>
+      <input type="text" id="item-quantity" name="item-quantity" />
+    </div>
+    <div>
+      <label for="item-condition">Item Condition</label>
+      <input type="text" id="item-condition" name="item-condition" />
     </div>
     <button type="submit" class="btn">Create</button>
   </form>
@@ -20,6 +36,7 @@
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
+      {{> object post}}
       <a href="/my-stuff/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
     {{/each}}
