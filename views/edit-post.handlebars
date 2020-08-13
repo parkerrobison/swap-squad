@@ -20,22 +20,8 @@
   </form>
 </article>
 
-<form class="comment-form">
-  <h2>
-    Add a comment
-  </h2>
-  <div>
-    <textarea name="comment-body" placeholder="What would you like to say?"></textarea>
-  </div>
-
-  <div>
-    <button type="submit">add comment</button>
-  </div>
-</form>
-
 {{> comments post.comments}}
 {{#if loggedIn}}
 <script src="/js/edit-post.js"></script>
 <script src="/js/delete-post.js"></script>
-<script src="/js/comment.js"></script>
 {{/if}}

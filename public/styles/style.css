@@ -51,6 +51,10 @@ button:hover {
   padding: 0;
 }
 
+ol {
+  list-style-type: none;
+}
+
 textarea,
 input,
 .comment {
