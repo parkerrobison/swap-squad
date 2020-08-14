@@ -51,6 +51,17 @@ button:hover {
   padding: 0;
 }
 
+ol {
+  list-style-type: none;
+}
+
+li {
+  border: 2px solid var(--blink-peach);
+  margin: 10px 0;
+  padding: 0 10px;
+  border-radius: 10px
+}
+
 textarea,
 input,
 .comment {
