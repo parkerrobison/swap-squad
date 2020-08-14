@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/parkerrobison/swap-squad#readme",
   "dependencies": {
+    "@sendgrid/mail": "^7.2.3",
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.1",
     "dotenv": "^8.2.0",
