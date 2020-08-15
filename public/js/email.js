@@ -1,11 +1,21 @@
+async function sendEmailRequest(event) {
+  event.preventDefault();
+  console.log("sending email")
 
-const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-const msg = {
-  to: 'rafa.mdlima@gmail.com',
-  from: 'noreplyswapsquad@gmail.com',
-  subject: 'Swap Squad - Somebody wants to trade!',
-  text: 'Looks like somebody wants to trade with you. please check your message',
-  html: '<strong>Swap Squad! Making trade fun and easy</strong>',
-};
-sgMail.send(msg);
+  const post_id = window.location.toString().split('/')[
+    window.location.toString().split('/').length - 1
+  ];
+
+  const response = await fetch('/api/email/request', {
+    method: 'POST',
+    body: JSON.stringify({
+      post_id,
+    }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+  console.log("email sent")
+}
+console.log("email button ready")
+document.querySelector('.email-button').addEventListener('submit', sendEmailRequest);
