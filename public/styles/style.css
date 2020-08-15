@@ -178,6 +178,20 @@ li {
   display: flex;
 }
 
+h1, 
+h2 {
+  color: var(--swap-primary);
+}
+
+.form {
+  width: 25%;
+  margin: 0 auto 3rem auto;
+}
+
+.form button {
+  margin: 0;
+}
+
 #object-wrapper, 
 #post-wrapper {
   width: 50%;
