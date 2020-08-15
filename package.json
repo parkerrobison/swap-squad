@@ -34,7 +34,8 @@
     "mysql2": "^2.1.0",
     "node-pre-gyp": "^0.15.0",
     "nodemailer": "^6.4.11",
-    "sequelize": "^6.3.4"
+    "sequelize": "^6.3.4",
+    "sparkpost": "^2.1.4"
   },
   "devDependencies": {}
 }
