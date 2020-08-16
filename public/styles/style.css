@@ -71,7 +71,6 @@ ol {
 }
 
 li {
-  border: 2px solid var(--blink-peach);
   margin: 10px 0;
   padding: 0 10px;
   border-radius: 10px;
