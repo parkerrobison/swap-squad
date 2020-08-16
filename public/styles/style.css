@@ -83,7 +83,8 @@ li {
 
 textarea,
 input,
-.comment {
+.comment,
+select {
   padding: 0.5%;
   border-radius: 5px;
   border: 1px solid #ccc;
