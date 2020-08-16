@@ -2,38 +2,47 @@
   <h2>Create New Post</h2>
 
   <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
+    <div id="content-wrapper">
+      <div id="post-wrapper">
+        <div>
+          <label for="post-title">Title</label>
+          <input type="text" id="post-title" name="post-title" />
+        </div>
+        <div>
+          <label for="post-text">Text</label>
+          <textarea id="post-text" name="post-text"></textarea>
+        </div>
+        <button type="submit" class="btn">Create</button>
+      </div>
+      <div id="object-wrapper">
+        <div>
+          <label for="item-name">Item Name</label>
+          <input type="text" id="item-name" name="item-name" />
+        </div>
+        <div>
+          <label for="item-description">Item Description</label>
+          <textarea id="item-description" name="item-description"></textarea>
+        </div>
+        <div id="item-details">
+          <div>
+            <label for="item-quantity">Item Quantity</label>
+            <input type="text" id="item-quantity" name="item-quantity" />
+          </div>
+          <div>
+            <label for="item-condition">Item Condition</label>
+            <select name="item-condition" id="item-condition">
+              <option value="Near Mint">Near Mint</option>
+              <option value="Lightly Used">Lightly Used</option>
+              <option value="Moderately Used">Moderately Used</option>
+              <option value="Heavily Used">Heavily Used</option>
+              <option value="Damaged">Damaged</option>
+            </select>
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      <label for="post-text">Text</label>
-      <textarea id="post-text" name="post-text"></textarea>
-    </div>
-    <div>
-      <label for="item-name">Item Name</label>
-      <input type="text" id="item-name" name="item-name" />
-    </div>
-    <div>
-      <label for="item-description">Item Description</label>
-      <textarea id="item-description" name="item-description"></textarea>
-    </div>
-    <div>
-      <label for="item-quantity">Item Quantity</label>
-      <input type="text" id="item-quantity" name="item-quantity" />
-    </div>
-    <div>
-      <label for="item-condition">Item Condition</label>
-      <select name="item-condition" id="item-condition">
-        <option value="Near Mint">Near Mint</option>
-        <option value="Lightly Used">Lightly Used</option>
-        <option value="Moderately Used">Moderately Used</option>
-        <option value="Heavily Used">Heavily Used</option>
-        <option value="Damaged">Damaged</option>
-      </select>
-    </div>
-    <button type="submit" class="btn">Create</button>
   </form>
+
 </section>
 {{#if posts.length}}
 <section>
@@ -41,8 +50,10 @@
   <ol>
     {{#each posts as |post|}}
     <li>
-      {{> post-info post}}
-      {{> object post}}
+      <div id="my-stuff-wrapper">
+        {{> post-info post}}
+        {{> object post}}
+      </div>
       <a href="/my-stuff/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
     {{/each}}
