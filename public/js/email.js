@@ -14,7 +14,8 @@ async function sendEmailRequest(event) {
       'Content-Type': 'application/json'
     }
   });
-  console.log("email sent")
+  //ideally this should be a modal but I couldn't get it to work.
+ window.alert("The owner of this post has been sent an email. They will reach out to you at your email address to negotiate a trade.")
 }
 console.log("email button ready")
 document.querySelector('.email-button').addEventListener('click', sendEmailRequest);
