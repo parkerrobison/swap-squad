@@ -1,5 +1,4 @@
 async function sendEmailRequest(event) {
-  event.preventDefault();
   console.log("sending email")
 
   const post_id = window.location.toString().split('/')[
@@ -18,4 +17,4 @@ async function sendEmailRequest(event) {
   console.log("email sent")
 }
 console.log("email button ready")
-document.querySelector('.email-button').addEventListener('submit', sendEmailRequest);
+document.querySelector('.email-button').addEventListener('click', sendEmailRequest);

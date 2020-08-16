@@ -35,7 +35,8 @@ router.post("/request", (req, res) => {
       to: author_post.email,
       from: 'noreplyswapsquad@gmail.com',
       subject: 'Swap Squad - Somebody wants to trade!',
-      text: 'Hello ' + author_post.username + ', \n Looks like user ' + user.username + ' email: ' + user.email + ' wants to trade in regards to the post with this title: ' + post_item.title + '! Please contact them and start your trade.',
+      text: 'Hello ' + author_post.username + ', \n Looks like user ' + user.username + ' email: ' + user.email + 
+      ' wants to trade in regards to the post with this title: ' + post_item.title + '! Please contact them to start your trade. \n Thanks for choosing Swap Squad.',
       
     };
     await sgMail.send(msg);
