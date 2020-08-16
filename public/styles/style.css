@@ -77,6 +77,10 @@ li {
   border-radius: 10px;
 }
 
+.post-list li {
+  display: flex;
+}
+
 textarea,
 input,
 .comment {
