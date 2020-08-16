@@ -44,8 +44,10 @@
   <ol>
     {{#each posts as |post|}}
     <li>
-      {{> post-info post}}
-      {{> object post}}
+      <div id="my-stuff-wrapper">
+        {{> post-info post}}
+        {{> object post}}
+      </div>
       <a href="/my-stuff/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
     {{/each}}

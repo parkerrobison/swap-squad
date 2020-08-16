@@ -152,6 +152,10 @@ nav {
   justify-content: space-between;
 }
 
+nav a {
+  margin-left: 1rem;
+}
+
 main {
   flex: 1;
   padding: 2% 4%;
@@ -174,13 +178,13 @@ ul {
   list-style-type: none;
 }
 
-li {
-  display: flex;
-}
-
 h1, 
 h2 {
   color: var(--swap-primary);
+}
+
+#my-stuff-wrapper {
+  display: flex;
 }
 
 .form {
