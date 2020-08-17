@@ -1,17 +1,30 @@
+<div id= "single-post-wrapper">
 {{> post-info post}}
+{{> object post}}
+</div>
 {{#if loggedIn}}
+<div class="email-div">
+  <div class="email-title">
+    <p>Interested this item? Click the send email button to initiate a trade.</p>
+  </div>
+
+  <button class="email-button">send email</button>
+</div>
 <form class="comment-form">
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea name="comment-body" placeholder="Enter text here to leave a comment on this post."></textarea>
   </div>
-  
+
   <div>
     <button type="submit">add comment</button>
   </div>
 </form>
-<div>
-    <button class="email-button" type="submit">Send Email</button>
-</div>
+{{!-- <div id="email-success-modal" class="modal">
+  <div class='modal-content'>
+    <span class="close">&times;</span>
+    <p>Email sucessfully sent! The owner of this post will contact you via email to start up a trade.</p>
+  </div>
+</div> --}}
 {{/if}}
 {{> comments post.comments}}
 {{#if loggedIn}}
