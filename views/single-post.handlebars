@@ -1,4 +1,7 @@
+<div id= "single-post-wrapper">
 {{> post-info post}}
+{{> object post}}
+</div>
 {{#if loggedIn}}
 <div class="email-div">
   <div class="email-title">
@@ -9,7 +12,7 @@
 </div>
 <form class="comment-form">
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea name="comment-body" placeholder="Enter text here to leave a comment on this post."></textarea>
   </div>
 
   <div>

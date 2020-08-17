@@ -10,7 +10,7 @@
       <label for="post-text">Text</label>
       <textarea name="post-text" type="text">{{post.post_text}}</textarea>
     </div>
-    <div>
+    <div class="post-data">
       Created by you on {{format_date post.created_at}}
       |
       <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
