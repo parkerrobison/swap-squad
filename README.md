@@ -10,7 +10,7 @@
   * [License](#license)
   * [Contributing](#contributing)
   * [Contributors](#contributors)
-  * [Contact Us](#contact us)
+  * [Contact Us](#contact-us)
 
   ## License
   [MIT License](https://choosealicense.com/licenses/mit/)
