@@ -7,10 +7,10 @@
   Swap Squad is different than any other eCommerce site you know. Liberated from the realm of money, you are free to trade what your items, rather than sell. hobbiests and collectors alike can ensure that their valued collections will be enjoyed by the right people who love the subject as much as they do. Welcome to Squad Space!!
 
   ## Table of Contents
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Credits](#credits)
   * [License](#license)
+  * [Contributing](#contributing)
+  * [Contributors](#contributors)
+  * [Contact Us](#contact us)
 
   ## License
   [MIT License](https://choosealicense.com/licenses/mit/)
@@ -21,10 +21,10 @@
   Clone our code or fork our repository, and make a pull request
 
   ## Contributors
-  [Parker Robison](https:/github.com/parkerrobison) <br />
-  [Jacob Corum](https:/github.com/jcorum11) <br />
-  [Graham Gibbs](https:/github.com/grahamgibbs)<br />
-  [Rafael DeLima](https:/github.com/delimr)<br />
+  [Parker Robison](https://www.github.com/parkerrobison) <br />
+  [Jacob Corum](https://www.github.com/jcorum11) <br />
+  [Graham Gibbs](https://www.github.com/grahamgibbs)<br />
+  [Rafael DeLima](https://www.github.com/delimr)<br />
   
   ## Contact Us
   [Email](jacob.w.corum@gmail.com)
