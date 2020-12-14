@@ -4,7 +4,7 @@
   ![License](https://img.shields.io/badge/license-MIT-green)
 
   ## Description
-  Swap Squad is different than any other eCommerce site you know. Liberated from the realm of money, you are free to trade what your items, rather than sell. hobbiests and collectors alike can ensure that their valued collections will be enjoyed by the right people who love the subject as much as they do. Welcome to Squad Space!!
+  Swap Squad is different than any other eCommerce site you know. Liberated from the realm of money, you are free to trade what your items, rather than sell. hobbiests and collectors alike can ensure that their valued collections will be enjoyed by the right people who love the subject as much as they do. Welcome to Squad Squad!! https://obscure-reef-91673.herokuapp.com/
 
   ## Table of Contents
   * [License](#license)
